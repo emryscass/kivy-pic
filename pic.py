@@ -3,8 +3,7 @@ from kivy.lang import Builder
 from kivy.uix.gridlayout import GridLayout
 
 class Menu(GridLayout):
-    def on_enter(self, instance):
-        print('===========================')
+    pass
 
 
 class PIC(App):
