@@ -1,0 +1,44 @@
+<LabelB@Label>:
+    bcolor: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: self.bcolor
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<Menu>:
+    cols: 1
+
+
+    Button:
+        size_hint_y: .07
+        text: 'Interactive Python'
+
+
+    BoxLayout:
+        LabelB:
+            bcolor: 0, 0, 1, 0.5
+            size_hint_x: .2
+            text: 'member list'
+
+        Label:
+            id: chat
+            text: chat.text
+            valign: 'top'
+
+
+        LabelB:
+            bcolor: 0, 0, 1, 0.3
+            size_hint_x: .2
+            text: 'channel list'
+
+    BoxLayout:
+        size_hint_y: .05
+        Label:
+            size_hint_x: .14
+            text: 'emryscass'
+        TextInput:
+            id: chat
+            size_hint_x: .86
+            on_text_validate: root.on_enter()
