@@ -10,26 +10,22 @@
 <Menu>:
     cols: 1
 
-
     Button:
         size_hint_y: .07
         text: 'Interactive Python'
 
-
     BoxLayout:
         LabelB:
-            bcolor: 0, 0, 1, 0.5
+            bcolor: 0, 0, 1, 0.2
             size_hint_x: .2
             text: 'member list'
 
         Label:
-            id: chat
-            text: chat.text
-            valign: 'top'
-
+            id: output
+            text: ''
 
         LabelB:
-            bcolor: 0, 0, 1, 0.3
+            bcolor: 0, 0, 1, 0.2
             size_hint_x: .2
             text: 'channel list'
 
@@ -41,3 +37,5 @@
         TextInput:
             id: chat
             size_hint_x: .86
+            multiline: False
+            on_text_validate: root.pass_text(self.text)
